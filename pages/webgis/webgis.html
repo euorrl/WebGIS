@@ -1,46 +1,58 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <base href="">
-    <title>Juan Pablo Duque - Map</title>
-
     <meta charset="utf-8">
-
-    <!--StyleSheets-->
-    <!-- <link rel="stylesheet" href="../assets/libraries/ol-v6.14.1-dist/ol.css"> -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <!-- Static files are imported from public folder -->
-    <link rel="stylesheet" href="../assets/css/custom-styles.css">
-
-    <!-- Modules are imported normally -->
-    <script type="module" src="../assets/js/map.js"></script>
+    <title>My WebGIS - Map</title>
+    <link rel="stylesheet" href="libraries/v8.2.0-package/ol.css">
+    <script src="libraries/v8.2.0-package/dist/ol.js"></script>
+    <link rel="stylesheet" href="../webgis/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@latest/dist/ol-layerswitcher.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <script src="https://unpkg.com/ol-layerswitcher@latest"></script>
 </head>
 
 <body>
-    <div class="w-100 vh-100">
+    <div>
         <div class="floating-button">
             <a href="../../index.html" class="btn btn-success">Go Home</a>
         </div>
         <div id="map"></div>
-
-        <!--Add here the popup HTML-->
-        <div id="popup" class="ol-popup">
-            <a href="#" id="popup-closer" class="ol-popup-closer">
-                &times;
-            </a>
-            <div id="popup-content"></div>
+        
+        <div id="static-legend">
+            <h4>Overlay Layers Legend</h4>
+            <ul>
+                <li><span class="legend-swatch">1</span>Land Cover</li>
+                <li><span class="legend-swatch">2</span>Population Class</li>
+                <li><span class="legend-swatch">3</span>NO₂: 2022-mean (2017–2021)</li>
+                <li><span class="legend-swatch">4</span>NO₂: Pollution-Population</li>
+                <li><span class="legend-swatch">5</span>PM₂.₅: 2022-mean (2017–2021)</li>
+                <li><span class="legend-swatch">6</span>PM₂.₅: Pollution-Population</li>
+                <li><span class="legend-swatch">7</span>PM₁₀: 2022-mean (2017–2021)</li>
+                <li><span class="legend-swatch">8</span>PM₁₀: Pollution-Population</li>
+            </ul>
         </div>
 
-        <!--Add here the legend HTML-->
-        <div id="legend" class="legend-container">
-            <span class="legend-title">Legend For map</span>
-            <div id="legend-content" class="legend-content">
-            </div>
-        </div>
+        <img id="layer-legend-img"
+            style="position:absolute;
+                bottom:40px;
+                left:20px;
+                max-width:200px;
+                width:200px;
+                height:auto;
+                display:none;
+                border:1px solid #666;
+                background:white;
+                padding:4px;
+                z-index:1000"
+            src=""
+            alt="Layer Legend"/>
 
     </div>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <script src="https://unpkg.com/ol-layerswitcher@latest"></script>
+    <script src="../webgis/assets/js/map.js"></script>
+</body>
 </html>
+
