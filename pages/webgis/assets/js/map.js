@@ -110,7 +110,7 @@ var pm2p5ADD = new ol.layer.Image({
     }),
     visible: false
 });
-// NO2:Pollution-Population
+// pm2p5:Pollution-Population
 var pm2p5PP = new ol.layer.Image({
     title: "pm2p5:Pollution-Population",
     type: 'base',

@@ -32,8 +32,35 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 .wrapper.style1.align-center {
-	background-color: #827e7e;
+	position: relative;
+  	overflow: hidden;
+  	background: none;
+  	min-height: 200px;
+  	font-weight: bold;
+  	font-size: 3em;
+  	color: #fff;
+}
+
+.wrapper.style1.align-center::before {
+  	content: "";
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0;
+  	width: 0;
+  	background: url('../../images/1.png') center/cover no-repeat;
+  	animation: reveal-bg 1.5s forwards;
+  	z-index: 0;
+}
+
+.wrapper.style1.align-center .inner,
+.wrapper.style1.align-center h2 {
+  	position: relative;
+  	z-index: 1;
+}
+
+@keyframes reveal-bg {
+  	to { width: 100%; }
 }
 
 ol, ul {
@@ -191,7 +218,7 @@ input, select, textarea {
 	}
 
 		p.major {
-			font-size: 1.25rem;
+			font-size: 1rem;
 		}
 
 	h1, h2, h3, h4, h5, h6 {
